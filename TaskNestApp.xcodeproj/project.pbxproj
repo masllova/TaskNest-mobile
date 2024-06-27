@@ -13,6 +13,19 @@
 		3351CE862C2DBF9400D065EC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3351CE852C2DBF9400D065EC /* Base */; };
 		3351CE882C2DBF9600D065EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3351CE872C2DBF9600D065EC /* Assets.xcassets */; };
 		3351CE8B2C2DBF9600D065EC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3351CE8A2C2DBF9600D065EC /* Base */; };
+		3351CE9E2C2DC36B00D065EC /* AppDesign in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CE9D2C2DC36B00D065EC /* AppDesign */; };
+		3351CEA02C2DC36E00D065EC /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CE9F2C2DC36E00D065EC /* Coordinators */; };
+		3351CEA22C2DC37300D065EC /* MainPage in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA12C2DC37300D065EC /* MainPage */; };
+		3351CEA42C2DC37700D065EC /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA32C2DC37700D065EC /* Networking */; };
+		3351CEA62C2DC37A00D065EC /* PersonalPage in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA52C2DC37A00D065EC /* PersonalPage */; };
+		3351CEA82C2DC37E00D065EC /* Registration in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA72C2DC37E00D065EC /* Registration */; };
+		3351CEAA2C2DC38200D065EC /* TeamPage in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA92C2DC38200D065EC /* TeamPage */; };
+		3351CEAC2C2DC38600D065EC /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEAB2C2DC38600D065EC /* Utils */; };
+		3351CEAE2C2DC38B00D065EC /* ViewComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEAD2C2DC38B00D065EC /* ViewComponents */; };
+		3351CEB22C2DC41600D065EC /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB12C2DC41600D065EC /* SkeletonView */; };
+		3351CEB52C2DC43200D065EC /* Lighty in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB42C2DC43200D065EC /* Lighty */; };
+		3351CEB82C2DC45500D065EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB72C2DC45500D065EC /* SnapKit */; };
+		3351CEBA2C2DC45500D065EC /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB92C2DC45500D065EC /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +53,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3351CE9E2C2DC36B00D065EC /* AppDesign in Frameworks */,
+				3351CEAE2C2DC38B00D065EC /* ViewComponents in Frameworks */,
+				3351CEA62C2DC37A00D065EC /* PersonalPage in Frameworks */,
+				3351CEA02C2DC36E00D065EC /* Coordinators in Frameworks */,
+				3351CEB22C2DC41600D065EC /* SkeletonView in Frameworks */,
+				3351CEBA2C2DC45500D065EC /* SnapKit-Dynamic in Frameworks */,
+				3351CEB52C2DC43200D065EC /* Lighty in Frameworks */,
+				3351CEA42C2DC37700D065EC /* Networking in Frameworks */,
+				3351CEA22C2DC37300D065EC /* MainPage in Frameworks */,
+				3351CEA82C2DC37E00D065EC /* Registration in Frameworks */,
+				3351CEB82C2DC45500D065EC /* SnapKit in Frameworks */,
+				3351CEAC2C2DC38600D065EC /* Utils in Frameworks */,
+				3351CEAA2C2DC38200D065EC /* TeamPage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +77,7 @@
 			children = (
 				3351CE7D2C2DBF9400D065EC /* TaskNestApp */,
 				3351CE7C2C2DBF9400D065EC /* Products */,
+				3351CE9C2C2DC36B00D065EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,17 +107,24 @@
 		3351CE922C2DBF9F00D065EC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3351CE9B2C2DC11000D065EC /* PersonalPage */,
-				3351CE9A2C2DC0EF00D065EC /* TeamPage */,
-				3351CE992C2DC0D900D065EC /* MainPage */,
-				3351CE982C2DC0BC00D065EC /* Registration */,
 				3351CE972C2DC0A000D065EC /* AppDesign */,
-				3351CE962C2DC08400D065EC /* ViewComponents */,
-				3351CE952C2DC05B00D065EC /* Networking */,
-				3351CE942C2DC02F00D065EC /* Utils */,
 				3351CE932C2DBFCE00D065EC /* Coordinators */,
+				3351CE992C2DC0D900D065EC /* MainPage */,
+				3351CE952C2DC05B00D065EC /* Networking */,
+				3351CE9B2C2DC11000D065EC /* PersonalPage */,
+				3351CE982C2DC0BC00D065EC /* Registration */,
+				3351CE9A2C2DC0EF00D065EC /* TeamPage */,
+				3351CE942C2DC02F00D065EC /* Utils */,
+				3351CE962C2DC08400D065EC /* ViewComponents */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		3351CE9C2C2DC36B00D065EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +143,21 @@
 			dependencies = (
 			);
 			name = TaskNestApp;
+			packageProductDependencies = (
+				3351CE9D2C2DC36B00D065EC /* AppDesign */,
+				3351CE9F2C2DC36E00D065EC /* Coordinators */,
+				3351CEA12C2DC37300D065EC /* MainPage */,
+				3351CEA32C2DC37700D065EC /* Networking */,
+				3351CEA52C2DC37A00D065EC /* PersonalPage */,
+				3351CEA72C2DC37E00D065EC /* Registration */,
+				3351CEA92C2DC38200D065EC /* TeamPage */,
+				3351CEAB2C2DC38600D065EC /* Utils */,
+				3351CEAD2C2DC38B00D065EC /* ViewComponents */,
+				3351CEB12C2DC41600D065EC /* SkeletonView */,
+				3351CEB42C2DC43200D065EC /* Lighty */,
+				3351CEB72C2DC45500D065EC /* SnapKit */,
+				3351CEB92C2DC45500D065EC /* SnapKit-Dynamic */,
+			);
 			productName = TaskNestApp;
 			productReference = 3351CE7B2C2DBF9400D065EC /* TaskNestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +186,12 @@
 				Base,
 			);
 			mainGroup = 3351CE722C2DBF9400D065EC;
+			packageReferences = (
+				3351CEAF2C2DC3F300D065EC /* XCRemoteSwiftPackageReference "Moya" */,
+				3351CEB02C2DC41600D065EC /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				3351CEB32C2DC43200D065EC /* XCRemoteSwiftPackageReference "Lighty" */,
+				3351CEB62C2DC45500D065EC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 3351CE7C2C2DBF9400D065EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -321,11 +376,14 @@
 				DEVELOPMENT_TEAM = C9GRWZY5P5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskNestApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +391,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Alexandra.TaskNestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,11 +411,14 @@
 				DEVELOPMENT_TEAM = C9GRWZY5P5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskNestApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,9 +426,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Alexandra.TaskNestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -389,6 +458,100 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3351CEAF2C2DC3F300D065EC /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		3351CEB02C2DC41600D065EC /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.31.0;
+			};
+		};
+		3351CEB32C2DC43200D065EC /* XCRemoteSwiftPackageReference "Lighty" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/abdullahselek/Lighty.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.7;
+			};
+		};
+		3351CEB62C2DC45500D065EC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3351CE9D2C2DC36B00D065EC /* AppDesign */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppDesign;
+		};
+		3351CE9F2C2DC36E00D065EC /* Coordinators */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Coordinators;
+		};
+		3351CEA12C2DC37300D065EC /* MainPage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MainPage;
+		};
+		3351CEA32C2DC37700D065EC /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		3351CEA52C2DC37A00D065EC /* PersonalPage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PersonalPage;
+		};
+		3351CEA72C2DC37E00D065EC /* Registration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Registration;
+		};
+		3351CEA92C2DC38200D065EC /* TeamPage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TeamPage;
+		};
+		3351CEAB2C2DC38600D065EC /* Utils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utils;
+		};
+		3351CEAD2C2DC38B00D065EC /* ViewComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ViewComponents;
+		};
+		3351CEB12C2DC41600D065EC /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3351CEB02C2DC41600D065EC /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		3351CEB42C2DC43200D065EC /* Lighty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3351CEB32C2DC43200D065EC /* XCRemoteSwiftPackageReference "Lighty" */;
+			productName = Lighty;
+		};
+		3351CEB72C2DC45500D065EC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3351CEB62C2DC45500D065EC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		3351CEB92C2DC45500D065EC /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3351CEB62C2DC45500D065EC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3351CE732C2DBF9400D065EC /* Project object */;
 }
