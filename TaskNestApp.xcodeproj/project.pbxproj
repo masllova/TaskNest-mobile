@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3351CE7F2C2DBF9400D065EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351CE7E2C2DBF9400D065EC /* AppDelegate.swift */; };
-		3351CE812C2DBF9400D065EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351CE802C2DBF9400D065EC /* SceneDelegate.swift */; };
-		3351CE832C2DBF9400D065EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351CE822C2DBF9400D065EC /* ViewController.swift */; };
-		3351CE882C2DBF9600D065EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3351CE872C2DBF9600D065EC /* Assets.xcassets */; };
 		3351CE8B2C2DBF9600D065EC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3351CE8A2C2DBF9600D065EC /* Base */; };
 		3351CE9E2C2DC36B00D065EC /* AppDesign in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CE9D2C2DC36B00D065EC /* AppDesign */; };
 		3351CEA02C2DC36E00D065EC /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CE9F2C2DC36E00D065EC /* Coordinators */; };
@@ -19,20 +16,18 @@
 		3351CEA62C2DC37A00D065EC /* PersonalPage in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA52C2DC37A00D065EC /* PersonalPage */; };
 		3351CEA82C2DC37E00D065EC /* Registration in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA72C2DC37E00D065EC /* Registration */; };
 		3351CEAA2C2DC38200D065EC /* TeamPage in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEA92C2DC38200D065EC /* TeamPage */; };
-		3351CEAC2C2DC38600D065EC /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEAB2C2DC38600D065EC /* Utils */; };
 		3351CEAE2C2DC38B00D065EC /* ViewComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEAD2C2DC38B00D065EC /* ViewComponents */; };
 		3351CEB22C2DC41600D065EC /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB12C2DC41600D065EC /* SkeletonView */; };
 		3351CEB52C2DC43200D065EC /* Lighty in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB42C2DC43200D065EC /* Lighty */; };
 		3351CEB82C2DC45500D065EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB72C2DC45500D065EC /* SnapKit */; };
 		3351CEBA2C2DC45500D065EC /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB92C2DC45500D065EC /* SnapKit-Dynamic */; };
+		3363C1FB2C2E1E0800D313C6 /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 3363C1FA2C2E1E0800D313C6 /* Utils */; };
+		3363C1FE2C31C88300D313C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363C1FC2C2E20CF00D313C6 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3351CE7B2C2DBF9400D065EC /* TaskNestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskNestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3351CE7E2C2DBF9400D065EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3351CE802C2DBF9400D065EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3351CE822C2DBF9400D065EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3351CE872C2DBF9600D065EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3351CE8A2C2DBF9600D065EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3351CE8C2C2DBF9600D065EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3351CE932C2DBFCE00D065EC /* Coordinators */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinators; sourceTree = "<group>"; };
@@ -44,6 +39,7 @@
 		3351CE992C2DC0D900D065EC /* MainPage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MainPage; sourceTree = "<group>"; };
 		3351CE9A2C2DC0EF00D065EC /* TeamPage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TeamPage; sourceTree = "<group>"; };
 		3351CE9B2C2DC11000D065EC /* PersonalPage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PersonalPage; sourceTree = "<group>"; };
+		3363C1FC2C2E20CF00D313C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +55,10 @@
 				3351CEBA2C2DC45500D065EC /* SnapKit-Dynamic in Frameworks */,
 				3351CEB52C2DC43200D065EC /* Lighty in Frameworks */,
 				3351CEA42C2DC37700D065EC /* Networking in Frameworks */,
+				3363C1FB2C2E1E0800D313C6 /* Utils in Frameworks */,
 				3351CEA22C2DC37300D065EC /* MainPage in Frameworks */,
 				3351CEA82C2DC37E00D065EC /* Registration in Frameworks */,
 				3351CEB82C2DC45500D065EC /* SnapKit in Frameworks */,
-				3351CEAC2C2DC38600D065EC /* Utils in Frameworks */,
 				3351CEAA2C2DC38200D065EC /* TeamPage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,13 +86,11 @@
 		3351CE7D2C2DBF9400D065EC /* TaskNestApp */ = {
 			isa = PBXGroup;
 			children = (
-				3351CE922C2DBF9F00D065EC /* Modules */,
-				3351CE7E2C2DBF9400D065EC /* AppDelegate.swift */,
-				3351CE802C2DBF9400D065EC /* SceneDelegate.swift */,
-				3351CE822C2DBF9400D065EC /* ViewController.swift */,
-				3351CE872C2DBF9600D065EC /* Assets.xcassets */,
-				3351CE892C2DBF9600D065EC /* LaunchScreen.storyboard */,
 				3351CE8C2C2DBF9600D065EC /* Info.plist */,
+				3363C1FC2C2E20CF00D313C6 /* SceneDelegate.swift */,
+				3351CE7E2C2DBF9400D065EC /* AppDelegate.swift */,
+				3351CE892C2DBF9600D065EC /* LaunchScreen.storyboard */,
+				3351CE922C2DBF9F00D065EC /* Modules */,
 			);
 			path = TaskNestApp;
 			sourceTree = "<group>";
@@ -148,12 +142,12 @@
 				3351CEA52C2DC37A00D065EC /* PersonalPage */,
 				3351CEA72C2DC37E00D065EC /* Registration */,
 				3351CEA92C2DC38200D065EC /* TeamPage */,
-				3351CEAB2C2DC38600D065EC /* Utils */,
 				3351CEAD2C2DC38B00D065EC /* ViewComponents */,
 				3351CEB12C2DC41600D065EC /* SkeletonView */,
 				3351CEB42C2DC43200D065EC /* Lighty */,
 				3351CEB72C2DC45500D065EC /* SnapKit */,
 				3351CEB92C2DC45500D065EC /* SnapKit-Dynamic */,
+				3363C1FA2C2E1E0800D313C6 /* Utils */,
 			);
 			productName = TaskNestApp;
 			productReference = 3351CE7B2C2DBF9400D065EC /* TaskNestApp.app */;
@@ -203,7 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3351CE882C2DBF9600D065EC /* Assets.xcassets in Resources */,
 				3351CE8B2C2DBF9600D065EC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3351CE832C2DBF9400D065EC /* ViewController.swift in Sources */,
 				3351CE7F2C2DBF9400D065EC /* AppDelegate.swift in Sources */,
-				3351CE812C2DBF9400D065EC /* SceneDelegate.swift in Sources */,
+				3363C1FE2C31C88300D313C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,10 +501,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = TeamPage;
 		};
-		3351CEAB2C2DC38600D065EC /* Utils */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Utils;
-		};
 		3351CEAD2C2DC38B00D065EC /* ViewComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ViewComponents;
@@ -536,6 +524,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3351CEB62C2DC45500D065EC /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		3363C1FA2C2E1E0800D313C6 /* Utils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,15 +6,19 @@ import PackageDescription
 let package = Package(
     name: "PersonalPage",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "PersonalPage",
             targets: ["PersonalPage"]),
     ],
+    dependencies: [
+        .package(name: "Utils", path: "../Utils"),
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "PersonalPage"),
+            name: "PersonalPage",
+            dependencies: [
+                .product(name: "Utils", package: "Utils"),
+            ]
+        ),
     ]
 )
