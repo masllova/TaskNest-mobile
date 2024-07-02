@@ -23,7 +23,7 @@ public class AppCoordinator: Coordinator {
     }
     
     public func start() {
-        window?.rootViewController =  CacheService.shared.isLoggedIn
+        window?.rootViewController = CacheService.shared.isLoggedIn
         ? makeTabBarController()
         : makeRegistrationController()
         window?.makeKeyAndVisible()
@@ -32,7 +32,12 @@ public class AppCoordinator: Coordinator {
 
 private extension AppCoordinator {
     func makeRegistrationController() -> UIViewController {
-        let coordinator = RegistrationCoordinator()
+        let coordinator = RegistrationCoordinator() { [weak self] in
+            guard let self else {
+                return
+            }
+            self.window?.rootViewController = self.makeTabBarController()
+        }
         coordinator.start()
         return coordinator.navigationController
     }

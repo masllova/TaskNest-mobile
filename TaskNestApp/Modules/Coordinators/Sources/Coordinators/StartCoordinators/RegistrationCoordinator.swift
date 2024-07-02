@@ -7,11 +7,14 @@ public class RegistrationCoordinator: Coordinator {
     // MARK: - Properties
     
     public var navigationController: UINavigationController
+    private var onCompletionFlow: (() -> Void)
     
     // MARK: - init
     
-    public init(navigationController: UINavigationController = .init()) {
+    public init(navigationController: UINavigationController = .init(),
+                onCompletionFlow: @escaping (() -> Void)) {
         self.navigationController = navigationController
+        self.onCompletionFlow = onCompletionFlow
     }
     
     // MARK: - Functions
@@ -47,5 +50,9 @@ public extension RegistrationCoordinator {
     func setTheUserIsRegistered(with token: String) {
         CacheService.shared.isLoggedIn = true
         CacheService.shared.token = token
+        
+        navigationController.popViewController(animated: true)
+        navigationController.viewControllers.removeAll()
+        onCompletionFlow()
     }
 }
