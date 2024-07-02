@@ -23,14 +23,18 @@ public class AppCoordinator: Coordinator {
     }
     
     public func start() {
-        window?.rootViewController = makeTabBarController()
+        window?.rootViewController =  CacheService.shared.isLoggedIn
+        ? makeTabBarController()
+        : makeRegistrationController()
         window?.makeKeyAndVisible()
     }
 }
 
 private extension AppCoordinator {
-    func isUserAuth() -> Bool {
-        return true
+    func makeRegistrationController() -> UIViewController {
+        let coordinator = RegistrationCoordinator()
+        coordinator.start()
+        return coordinator.navigationController
     }
     
     func makeTabBarController() -> UITabBarController {
