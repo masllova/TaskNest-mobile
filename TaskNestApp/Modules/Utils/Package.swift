@@ -5,13 +5,22 @@ import PackageDescription
 
 let package = Package(
     name: "Utils",
+    platforms: [
+        .iOS(.v15)
+    ],
     products: [
         .library(
             name: "Utils",
             targets: ["Utils"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.7.1"),
+    ],
     targets: [
         .target(
-            name: "Utils"),
+            name: "Utils",
+            dependencies: [
+                .product(name: "SnapKit", package: "SnapKit")
+            ]),
     ]
 )

@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "PersonalPage",
+    platforms: [
+        .iOS(.v15)
+    ],
     products: [
         .library(
             name: "PersonalPage",
