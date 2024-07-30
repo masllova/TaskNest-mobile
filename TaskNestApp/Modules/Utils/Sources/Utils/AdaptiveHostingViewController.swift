@@ -2,10 +2,10 @@ import UIKit
 import SwiftUI
 import SnapKit
 
-class AdaptiveHostingViewController<Content: View>: UIViewController {
+public final class AdaptiveHostingViewController<Content: View>: UIViewController {
     private var rootView: Content
 
-    init(rootView: Content) {
+    public init(rootView: Content) {
         self.rootView = rootView
         super.init(nibName: nil, bundle: nil)
     }
@@ -14,7 +14,7 @@ class AdaptiveHostingViewController<Content: View>: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         let hostingController = UIHostingController(rootView: rootView)
@@ -22,7 +22,7 @@ class AdaptiveHostingViewController<Content: View>: UIViewController {
         addChild(hostingController)
         view.addSubview(hostingController.view)
 
-        hostingController.snp.makeConstraints {
+        hostingController.view.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         hostingController.didMove(toParent: self)

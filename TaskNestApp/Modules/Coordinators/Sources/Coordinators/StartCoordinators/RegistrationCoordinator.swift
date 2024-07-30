@@ -25,12 +25,8 @@ public class RegistrationCoordinator: Coordinator {
     
     public func start() {
         var vc: UIViewController {
-            if CacheService.shared.hasShownOpening {
-                return OpeningViewController(
-                    viewModel: .init(
-                        coordinator: self
-                    )
-                )
+            if true { // replace to CacheService.shared.hasShownOpening
+                return AdaptiveHostingViewController(rootView: OpeningView())
             }
             return RegistrationViewController(
                 viewModel: .init(
