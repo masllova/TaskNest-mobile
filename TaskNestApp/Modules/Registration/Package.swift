@@ -15,12 +15,16 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Utils", path: "../Utils"),
+        .package(name: "AppDesign", path: "../AppDesign"),
+        .package(name: "ViewComponents", path: "../ViewComponents"),
     ],
     targets: [
         .target(
             name: "Registration",
             dependencies: [
                 .product(name: "Utils", package: "Utils"),
+                .product(name: "AppDesign", package: "AppDesign"),
+                .product(name: "ViewComponents", package: "ViewComponents"),
             ]
         ),
     ]
