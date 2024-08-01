@@ -5,6 +5,7 @@ import AppDesign
 
 public struct OpeningView: View {
     @ObservedObject var viewModel: OpeningViewModel
+    @State private(set) var pageNumber = 0
     
     public init(viewModel: OpeningViewModel) {
         self.viewModel = viewModel
@@ -12,7 +13,7 @@ public struct OpeningView: View {
     
     public var body: some View {
         VStack {
-            skipButton
+            navigation
             Spacer(minLength: 48)
             title
             Spacer(minLength: 12)
@@ -20,9 +21,11 @@ public struct OpeningView: View {
             Spacer(minLength: 46)
             VStack {
                 description
-                Spacer()
-                // traker view
-                nextButton
+                Spacer(minLength: 23)
+                VStack {
+                    pageControl
+                    nextButton
+                }
             }
             .padding(.horizontal, 20)
         }
@@ -34,28 +37,49 @@ public struct OpeningView: View {
         .ignoresSafeArea()
     }
     
-    private var skipButton: some View {
+    private var navigation: some View {
         HStack {
+            Button {
+                viewModel.onBackButtonTap { ind in
+                    pageNumber = ind
+                }
+            } label: {
+                VCSImage(
+                    image: AppImages.backArrow.getSUI(),
+                    style: .init(
+                        mode: .fit,
+                        height: 45
+                    )
+                )
+                .opacity(
+                    viewModel.isFirstStep
+                    ? 0
+                    : 1
+                )
+            }
             Spacer()
-            VCSText(
-                text: AppStrings.Opening.skip,
-                style: .init(
-                    font: AppFonts.regular.getSUI(size: 20),
-                    color: viewModel.isFirstStep
-                    ? AppColors.subtitle.getSUI()
-                    : AppColors.background.getSUI(),
-                    alignment: .trailing
-                ),
-                backgroundStyle: .init(
-                    horizontalPadding: 18
-                ),
-                onTap: viewModel.onSkipTap
-            )
-            .opacity(
-                viewModel.isFirstStep
-                ? 1
-                : 0
-            )
+            Button {
+                viewModel.onSkipTap()
+            } label: {
+                VCSText(
+                    text: AppStrings.Opening.skip,
+                    style: .init(
+                        font: AppFonts.regular.getSUI(size: 20),
+                        color: viewModel.isFirstStep
+                        ? AppColors.subtitle.getSUI()
+                        : AppColors.background.getSUI(),
+                        alignment: .trailing
+                    ),
+                    backgroundStyle: .init(
+                        horizontalPadding: 18
+                    )
+                )
+                .opacity(
+                    viewModel.isFirstStep
+                    ? 1
+                    : 0
+                )
+            }
         }
     }
     
@@ -78,7 +102,7 @@ public struct OpeningView: View {
             ? AppImages.oppeningFirstStep.getSUI()
             : AppImages.oppeningSecondStep.getSUI(),
             style: .init(
-                mode: .fit
+                width: UIScreen.main.bounds.width
             )
         )
     }
@@ -100,23 +124,38 @@ public struct OpeningView: View {
         }
     }
     
+    private var pageControl: some View {
+        HStack {
+            PageTrackerView(
+                pageCount: viewModel.pageCount,
+                currentPage: $pageNumber
+            )
+            Spacer()
+        }
+    }
+    
     private var nextButton: some View {
         HStack {
             Spacer()
-            VCSText(
-                text: AppStrings.Opening.next,
-                style: .init(
-                    font: AppFonts.regular.getSUI(size: 18),
-                    color: AppColors.staticWhite.getSUI()
-                ),
-                backgroundStyle: .init(
-                    color: AppColors.accent.getSUI(),
-                    cornerRadius: 20,
-                    verticalPadding: 10.5,
-                    horizontalPadding: 46.5
-                ),
-                onTap: viewModel.onNextTap
-            )
+            Button {
+                viewModel.onNextTap() { ind in
+                    pageNumber = ind
+                }
+            } label: {
+                VCSText(
+                    text: AppStrings.Opening.next,
+                    style: .init(
+                        font: AppFonts.regular.getSUI(size: 18),
+                        color: AppColors.staticWhite.getSUI()
+                    ),
+                    backgroundStyle: .init(
+                        color: AppColors.accent.getSUI(),
+                        cornerRadius: 20,
+                        verticalPadding: 10.5,
+                        horizontalPadding: 46.5
+                    )
+                )
+            }
         }
     }
 }

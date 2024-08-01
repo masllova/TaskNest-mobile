@@ -7,7 +7,6 @@ public struct VCSText: View {
     
     private var style: VCSTextStyle
     private var backgroundStyle: VCSViewBackgroundStyle
-    private var onTap: (() -> Void)?
     
     private var bodyText: String {
         bindingText ?? text.orEmpty
@@ -16,13 +15,11 @@ public struct VCSText: View {
     public init(text: String? = nil,
                 bindingText: Binding<String?> = Binding.constant(nil),
                 style: VCSTextStyle = .init(),
-                backgroundStyle: VCSViewBackgroundStyle = .init(),
-                onTap: (() -> Void)? = nil) {
+                backgroundStyle: VCSViewBackgroundStyle = .init()) {
         self.text = text
         self._bindingText = bindingText
         self.style = style
         self.backgroundStyle = backgroundStyle
-        self.onTap = onTap
     }
     
     public var body: some View {
@@ -32,8 +29,5 @@ public struct VCSText: View {
             .lineLimit(style.lineLimit)
             .multilineTextAlignment(style.alignment)
             .setupBackground(with: backgroundStyle)
-            .onTapGesture {
-                onTap?()
-            }
     }
 }

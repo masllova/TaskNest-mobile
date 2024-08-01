@@ -6,7 +6,6 @@ public struct VCSImage: View {
     @Binding private var bindingImage: Image?
     private var style: VCSImageStyle
     private var backgroundStyle: VCSViewBackgroundStyle
-    private var onTap: (() -> Void)?
     
     private var bodyImage: Image {
         bindingImage ?? image ?? Image(.empty)
@@ -15,13 +14,11 @@ public struct VCSImage: View {
     public init(image: Image? = nil,
                 bindingImage: Binding<Image?> = Binding.constant(nil),
                 style: VCSImageStyle = .init(),
-                backgroundStyle: VCSViewBackgroundStyle = .init(),
-                onTap: (() -> Void)? = nil) {
+                backgroundStyle: VCSViewBackgroundStyle = .init()) {
         self.image = image
         self._bindingImage = bindingImage
         self.style = style
         self.backgroundStyle = backgroundStyle
-        self.onTap = onTap
     }
     
     public var body: some View {
@@ -38,8 +35,5 @@ public struct VCSImage: View {
                 radius: style.shadowRadius
             )
             .setupBackground(with: backgroundStyle)
-            .onTapGesture {
-                onTap?()
-            }
     }
 }
