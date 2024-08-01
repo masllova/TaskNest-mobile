@@ -15,8 +15,8 @@ public struct VCSViewBackgroundStyle {
                 cornerRadius: CGFloat = .zero,
                 shadowColor: Color = .clear,
                 shadowRadius: CGFloat = .zero,
-                width: CGFloat = .zero,
-                height: CGFloat = .zero,
+                width: CGFloat = .infinity,
+                height: CGFloat = .infinity,
                 verticalPadding: CGFloat = .zero,
                 horizontalPadding: CGFloat = .zero) {
         self.color = color

@@ -12,8 +12,8 @@ public struct VCSImage: View {
         bindingImage ?? image ?? Image(.empty)
     }
     
-    public init(image: Image?,
-                bindingImage: Binding<Image?>,
+    public init(image: Image? = nil,
+                bindingImage: Binding<Image?> = Binding.constant(nil),
                 style: VCSImageStyle = .init(),
                 backgroundStyle: VCSViewBackgroundStyle = .init(),
                 onTap: (() -> Void)? = nil) {

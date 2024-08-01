@@ -13,8 +13,8 @@ public struct VCSText: View {
         bindingText ?? text.orEmpty
     }
     
-    public init(text: String?,
-                bindingText: Binding<String?>,
+    public init(text: String? = nil,
+                bindingText: Binding<String?> = Binding.constant(nil),
                 style: VCSTextStyle = .init(),
                 backgroundStyle: VCSViewBackgroundStyle = .init(),
                 onTap: (() -> Void)? = nil) {

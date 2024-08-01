@@ -23,6 +23,7 @@
 		3351CEBA2C2DC45500D065EC /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3351CEB92C2DC45500D065EC /* SnapKit-Dynamic */; };
 		3363C1FB2C2E1E0800D313C6 /* Utils in Frameworks */ = {isa = PBXBuildFile; productRef = 3363C1FA2C2E1E0800D313C6 /* Utils */; };
 		3363C1FE2C31C88300D313C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363C1FC2C2E20CF00D313C6 /* SceneDelegate.swift */; };
+		33C9A19A2C5AEE5800E0598E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C9A1992C5AEE0C00E0598E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3351CE9A2C2DC0EF00D065EC /* TeamPage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TeamPage; sourceTree = "<group>"; };
 		3351CE9B2C2DC11000D065EC /* PersonalPage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PersonalPage; sourceTree = "<group>"; };
 		3363C1FC2C2E20CF00D313C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		33C9A1992C5AEE0C00E0598E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				3351CE8C2C2DBF9600D065EC /* Info.plist */,
+				33C9A1992C5AEE0C00E0598E /* Assets.xcassets */,
 				3363C1FC2C2E20CF00D313C6 /* SceneDelegate.swift */,
 				3351CE7E2C2DBF9400D065EC /* AppDelegate.swift */,
 				3351CE892C2DBF9600D065EC /* LaunchScreen.storyboard */,
@@ -197,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C9A19A2C5AEE5800E0598E /* Assets.xcassets in Resources */,
 				3351CE8B2C2DBF9600D065EC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
