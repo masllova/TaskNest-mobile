@@ -27,4 +27,7 @@ public class TeamPageCoordinators: Coordinator {
         
         navigationController.setViewControllers([vc], animated: false)
     }
+    public func finish() {
+        //
+    }
 }

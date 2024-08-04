@@ -27,4 +27,7 @@ public class MainPageCoordinator: Coordinator {
         
         navigationController.setViewControllers([vc], animated: false)
     }
+    public func finish() {
+        //
+    }
 }

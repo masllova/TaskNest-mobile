@@ -18,9 +18,9 @@ public class OpeningViewModel: Coordinating, ObservableObject {
 
 public extension OpeningViewModel {
     func onSkipTap() {
-        if isFirstStep {
-            // coordanator.showRegistration
-        }
+        coordinator?.eventOccurred(
+            with: .skipButtonTap
+        )
     }
     
     func onNextTap(pageUpdater: (Int) -> Void) {
@@ -41,7 +41,6 @@ public extension OpeningViewModel {
                 currentPage -= 1
                 isFirstStep.toggle()
                 pageUpdater(currentPage)
-    
             }
         }
     }

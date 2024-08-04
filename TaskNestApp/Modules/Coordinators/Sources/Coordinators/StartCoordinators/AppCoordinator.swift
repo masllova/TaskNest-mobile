@@ -28,6 +28,9 @@ public class AppCoordinator: Coordinator {
         : makeRegistrationController()
         window?.makeKeyAndVisible()
     }
+    public func finish() {
+        //
+    }
 }
 
 private extension AppCoordinator {

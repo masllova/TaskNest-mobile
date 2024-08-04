@@ -38,8 +38,10 @@ public struct OpeningView: View {
     private var navigation: some View {
         HStack {
             Button {
-                viewModel.onBackButtonTap { ind in
-                    pageNumber = ind
+                if !viewModel.isFirstStep {
+                    viewModel.onBackButtonTap { ind in
+                        pageNumber = ind
+                    }
                 }
             } label: {
                 VCSImage(
@@ -57,7 +59,9 @@ public struct OpeningView: View {
             }
             Spacer()
             Button {
-                viewModel.onSkipTap()
+                if viewModel.isFirstStep {
+                    viewModel.onSkipTap()
+                }
             } label: {
                 VCSText(
                     text: AppStrings.Opening.skip,

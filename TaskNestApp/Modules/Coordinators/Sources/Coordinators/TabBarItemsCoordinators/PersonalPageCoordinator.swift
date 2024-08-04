@@ -27,5 +27,8 @@ public class PersonalPageCoordinators: Coordinator {
         
         navigationController.setViewControllers([vc], animated: false)
     }
+    public func finish() {
+        //
+    }
 }
 

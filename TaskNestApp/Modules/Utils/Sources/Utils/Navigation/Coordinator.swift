@@ -7,4 +7,5 @@ public protocol Coordinator {
     
     func eventOccurred(with type: NavigationEvent)
     func start()
+    func finish()
 }
