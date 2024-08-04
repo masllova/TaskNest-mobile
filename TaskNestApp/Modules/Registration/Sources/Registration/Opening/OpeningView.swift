@@ -14,26 +14,24 @@ public struct OpeningView: View {
     public var body: some View {
         VStack {
             navigation
-            Spacer(minLength: 48)
             title
-            Spacer(minLength: 12)
             image
-            Spacer(minLength: 46)
             VStack {
                 description
-                Spacer(minLength: 23)
                 VStack {
                     pageControl
                     nextButton
                 }
+                .padding(.top, .calcToVertical(10))
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, .calcToHorizontal(20))
+            .padding(.top, .calcToVertical(26))
         }
         .background(
             AppColors.background.getSUI()
         )
-        .padding(.top, 64)
-        .padding(.bottom, 34)
+        .padding(.top, .calcToVertical(54))
+        .padding(.bottom, .calcToVertical(24))
         .ignoresSafeArea()
     }
     
@@ -48,7 +46,7 @@ public struct OpeningView: View {
                     image: AppImages.backArrow.getSUI(),
                     style: .init(
                         mode: .fit,
-                        height: 45
+                        height: .calcToVertical(45)
                     )
                 )
                 .opacity(
@@ -71,7 +69,7 @@ public struct OpeningView: View {
                         alignment: .trailing
                     ),
                     backgroundStyle: .init(
-                        horizontalPadding: 18
+                        horizontalPadding: .calcToHorizontal(18)
                     )
                 )
                 .opacity(
@@ -94,6 +92,11 @@ public struct OpeningView: View {
                 lineLimit: 2
             )
         )
+        .frame(
+            height: .calcToVertical(84)
+        )
+        .padding(.horizontal, .calcToHorizontal(19))
+        .padding(.top, .calcToVertical(36))
     }
     
     private var image: some View {
@@ -102,9 +105,11 @@ public struct OpeningView: View {
             ? AppImages.oppeningFirstStep.getSUI()
             : AppImages.oppeningSecondStep.getSUI(),
             style: .init(
-                width: UIScreen.main.bounds.width
+                width: UIScreen.main.bounds.width,
+                height: .calcToVertical(326)
             )
         )
+        .padding(.top, .calcToVertical(12))
     }
     
     private var description: some View {
@@ -120,8 +125,13 @@ public struct OpeningView: View {
                     alignment: .leading
                 )
             )
-            Spacer(minLength: 40)
+            Spacer(
+                minLength: .calcToVertical(40)
+            )
         }
+        .frame(
+            height: .calcToVertical(115)
+        )
     }
     
     private var pageControl: some View {
@@ -151,8 +161,8 @@ public struct OpeningView: View {
                     backgroundStyle: .init(
                         color: AppColors.accent.getSUI(),
                         cornerRadius: 20,
-                        verticalPadding: 10.5,
-                        horizontalPadding: 46.5
+                        verticalPadding: .calcToVertical(10.5),
+                        horizontalPadding: .calcToHorizontal(46.5)
                     )
                 )
             }
