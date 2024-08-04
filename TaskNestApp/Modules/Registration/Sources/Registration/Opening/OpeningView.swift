@@ -114,6 +114,7 @@ public struct OpeningView: View {
             )
         )
         .padding(.top, .calcToVertical(12))
+        .animation(.linear)
     }
     
     private var description: some View {
