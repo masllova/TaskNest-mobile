@@ -110,8 +110,8 @@
             filePath = "TaskNestApp/Modules/Coordinators/Sources/Coordinators/StartCoordinators/RegistrationCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "eventOccurred(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "TaskNestApp/Modules/Coordinators/Sources/Coordinators/StartCoordinators/RegistrationCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "eventOccurred(with:)"
             landmarkType = "7">
          </BreakpointContent>

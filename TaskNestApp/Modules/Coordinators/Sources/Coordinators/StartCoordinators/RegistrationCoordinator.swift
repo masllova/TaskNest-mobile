@@ -24,6 +24,7 @@ public class RegistrationCoordinator: Coordinator {
         case .backButtonTap:
             break
         case .skipButtonTap:
+            setTheOpeningWasShown()
             let vc = getRegistrationVC()
             navigationController.viewControllers.removeAll()
             navigationController.setViewControllers([vc], animated: false)
@@ -32,7 +33,7 @@ public class RegistrationCoordinator: Coordinator {
     
     public func start() {
         var vc: UIViewController {
-            if true { // replace to CacheService.shared.hasShownOpening
+            if CacheService.shared.hasShownOpening {
                 return getOpeningVC()
             }
             return getRegistrationVC()
@@ -46,26 +47,19 @@ public class RegistrationCoordinator: Coordinator {
     }
 }
 
-public extension RegistrationCoordinator {
-    func setTheOpeningWasShown() {
-        CacheService.shared.hasShownOpening = true
-    }
-    
-    func setTheUserIsRegistered(with token: String) {
-        CacheService.shared.isLoggedIn = true
-        CacheService.shared.token = token
-        
-        navigationController.popViewController(animated: true)
-        navigationController.viewControllers.removeAll()
-        onCompletionFlow()
-    }
-}
-
 private extension RegistrationCoordinator {
     func getRegistrationVC() -> UIViewController {
-        return RegistrationViewController(
-            viewModel: .init(
-                coordinator: self
+        return AdaptiveHostingViewController(
+            rootView: RegistrationView(
+                viewModel: .init(
+                    coordinator: self
+                ) { [weak self] token in
+                    guard let self else {
+                        return
+                    }
+                    self.setTheUserIsRegistered(with: token)
+                    self.finish()
+                }
             )
         )
     }
@@ -78,5 +72,18 @@ private extension RegistrationCoordinator {
                 )
             )
         )
+    }
+    
+    func setTheOpeningWasShown() {
+        CacheService.shared.hasShownOpening = true
+    }
+    
+    func setTheUserIsRegistered(with token: String) {
+        CacheService.shared.isLoggedIn = true
+        CacheService.shared.token = token
+        
+        navigationController.popViewController(animated: true)
+        navigationController.viewControllers.removeAll()
+        onCompletionFlow()
     }
 }
