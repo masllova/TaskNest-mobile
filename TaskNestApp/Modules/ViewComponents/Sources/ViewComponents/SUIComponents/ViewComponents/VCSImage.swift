@@ -2,27 +2,20 @@ import SwiftUI
 import Utils
 
 public struct VCSImage: View {
-    private var image: Image?
-    @Binding private var bindingImage: Image?
+    private var image: Image
     private var style: VCSImageStyle
     private var backgroundStyle: VCSViewBackgroundStyle
     
-    private var bodyImage: Image {
-        bindingImage ?? image ?? Image(.empty)
-    }
-    
-    public init(image: Image? = nil,
-                bindingImage: Binding<Image?> = Binding.constant(nil),
+    public init(image: Image,
                 style: VCSImageStyle = .init(),
                 backgroundStyle: VCSViewBackgroundStyle = .init()) {
         self.image = image
-        self._bindingImage = bindingImage
         self.style = style
         self.backgroundStyle = backgroundStyle
     }
     
     public var body: some View {
-        bodyImage
+        image
             .resizable()
             .aspectRatio(contentMode: style.mode)
             .frame(
